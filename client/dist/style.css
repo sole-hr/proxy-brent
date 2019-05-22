@@ -1,19 +1,56 @@
-#app {
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+* {
+  border: solid 1px;
+}
+
+#title {
   background-color: red;
 }
 
-#header {
-  background-color:blue;
-}
-
 #image-gallery {
-  background-color: pink;
-}
-
-#customer-reviews {
   background-color: purple;
 }
 
-#carousel {
-  background-color: orangered;
+#color-selector {
+  background-color: grey;
+}
+
+#size-selector {
+  background-color: beige;
+}
+
+#cart-favorite-buttons {
+  background-color: orange;
+}
+
+#description {
+  background-color: grey;
+}
+
+#shoe-image {
+  height: 10%;
+  width: 10%;
+}
+
+.color-block {
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+}
+
+.size-button {
+  width: 183px;
+  height: 48;
+  margin: 2.5px;
+}
+
+.cart-favorite-button {
+  /* border-radius: 30%; */
+  width: 377px;
+  height: 50px;
+  display: block;
 }
