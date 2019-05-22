@@ -1,40 +1,29 @@
-body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-
-}
-
-* {
-  border: solid 1px;
-}
-
-/* BOOTSTRAP OVERRIDE */
-
 #navbar {
   height: 100px;
-  background-color: grey;
+  background-color: rgb(247, 247, 247);
 }
 #title {
-  background-color: red;
+  /* background-color: red; */
 }
 
 #image-gallery {
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 #color-selector {
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 #size-selector {
-  background-color: beige;
+  /* background-color: beige; */
 }
 
 #cart-favorite-buttons {
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 #description {
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 #shoe-image {
