@@ -15,6 +15,7 @@
     "test": "npm run project image-gallery server-dev",
     "restart": "pm2 startOrRestart ecosystem.config.js",
     "deploy-compile": "webpack -d",
+    "deploy-setup": "pm2 deploy ecosystem.config.js production setup",
     "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "devDependencies": {
