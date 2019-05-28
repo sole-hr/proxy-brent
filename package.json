@@ -14,6 +14,7 @@
     "run-all": "concurrently \"npm run react-dev\" \"npm run server-dev\"",
     "test": "npm run project image-gallery server-dev",
     "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy-compile": "webpack -d",
     "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "devDependencies": {

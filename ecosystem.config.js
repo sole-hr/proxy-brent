@@ -11,7 +11,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:nike-hratx41-fec/proxy-ken.git',
       path: '/home/ubuntu/proxy-ken',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+      'post-deploy': 'npm install && npm run deploy-compile && pm2 startOrRestart ecosystem.config.js'
     }
   }
 }
