@@ -20,6 +20,7 @@ class App extends React.Component {
 
     this.onTextChange = this.onTextChange.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.onSizeClick = this.onSizeClick.bind(this);
   }
 
   onTextChange(event) {
@@ -29,6 +30,12 @@ class App extends React.Component {
   onClick(event) {
     this.setState({ sku: this.state.textbox }, () => {
       console.log(this.state.sku);
+    });
+  }
+
+  onSizeClick(event) {
+    this.setState({ size: event.target.value }, () => {
+      console.log("Size updated to ", this.state.size);
     });
   }
 
@@ -46,19 +53,21 @@ class App extends React.Component {
             <div className="col-4">
               <Title sku={this.state.sku} />
               <ColorSelector sku={this.state.sku} />
-              <SizeSelector sku={this.state.sku} />
+              <SizeSelector
+                sku={this.state.sku}
+                onSizeClick={this.onSizeClick}
+              />
               <CartFavoriteButtons sku={this.state.sku} />
               <Description sku={this.state.sku} />
               <div id="customer-reviews">Customer Reviews Loading...</div>
             </div>
           </div>
         </div>
-        <Guides />
-        {/* <Subfooter /> */}
-        <div className="row">
-        </div>
+        {/* <Carousel /> */}
+        <div className="row" />
       </div>
     );
   }
 }
+window.App = App;
 export default App;

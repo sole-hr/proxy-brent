@@ -4,14 +4,8 @@ import Axios from "axios";
 import App from "./components/App.jsx";
 
 const componentUrls = [
-  process.env.TITLE_URL,
-  process.env.IMAGE_GALLERY_URL,
-  process.env.COLOR_SELECTOR_URL,
-  process.env.SIZE_SELECTOR_URL,
-  process.env.CART_FAVORITE_URL,
-  process.env.DESCRIPTION_URL,
-  process.env.GUIDES_URL,
-  process.env.SUBFOOTER_URL
+  process.env.KEN_URL,
+  process.env.DAVID_URL
 ];
 
 const componentUrlPromises = componentUrls.map(url => {
