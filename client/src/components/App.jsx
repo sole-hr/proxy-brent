@@ -1,24 +1,26 @@
 import React from 'react';
-import '../styles/app.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+
+    }
   }
 
-  componentWillMount() {
-    const scripts = document.createElement('script');
-    scripts.src = process.env.IMAGE_GALLERY_URL;
-    const docBody = document.querySelector('body');
-    docBody.append(scripts);
-  }
 
   render() {
     return (
-      <div>This is the app</div>
+      <div>
+        <Title />
+        <Description />
+        {/* <ImageGallery /> */}
+      </div>
     )
   }
 }
 
+window.App = App;
 export default App;
