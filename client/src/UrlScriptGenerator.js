@@ -1,31 +1,29 @@
-const documentBody = document.querySelector("body");
+import React from "react";
+import ReactDOM from "react-dom";
+import Axios from "axios";
+import App from "./components/App.jsx";
 
-// require all components first
+const componentUrls = [
+  process.env.TITLE_URL,
+  process.env.IMAGE_GALLERY_URL,
+  process.env.COLOR_SELECTOR_URL,
+  process.env.SIZE_SELECTOR_URL,
+  process.env.CART_FAVORITE_URL,
+  process.env.DESCRIPTION_URL,
+  process.env.GUIDES_URL,
+  process.env.SUBFOOTER_URL
+];
 
-// TITLE COMPONENT <- Ken
-const titleScriptComponent = document.createElement("script");
-titleScriptComponent.src = process.env.TITLE_URL;
+const componentUrlPromises = componentUrls.map(url => {
+  return Axios.get(url);
+});
 
-// IMAGE GALLER COMPONENT <- Ken
-const imageGalleryScriptComponent = document.createElement("script");
-imageGalleryScriptComponent.src = process.env.IMAGE_GALLERY_URL;
-
-
-// DESCRIPTION COMPONENT
-const descriptionScriptComponent = document.createElement("script");
-descriptionScriptComponent.src = process.env.DESCRIPTION_URL;
-
-// require app
-const appScriptComponent = document.createElement("script");
-appScriptComponent.src = "./app-bundle.js";
-
-// require renderer
-const renderScript = document.createElement("script");
-renderScript.src = "./renderer-bundle.js";
-
-documentBody.append(titleScriptComponent);
-documentBody.append(imageGalleryScriptComponent);
-documentBody.append(descriptionScriptComponent);
-
-documentBody.append(appScriptComponent);
-documentBody.append(renderScript);
+Promise.all(componentUrlPromises)
+  .then(scripts => {
+    scripts.forEach(script => {
+      eval(script.data);
+    });
+  })
+  .then(() => {
+    ReactDOM.render(<App />, document.getElementById("app"));
+  });
