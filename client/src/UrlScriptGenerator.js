@@ -20,8 +20,6 @@ Promise.all(componentUrlPromises)
       eval(script.data);
     });
   })
-  .then(() => {
-    // ReactDOM.render(<App />, document.getElementById("app"));
+  .catch(err => {
+    console.log(err);
   });
-
-// ReactDOM.render(<App />, document.getElementById("app"));
