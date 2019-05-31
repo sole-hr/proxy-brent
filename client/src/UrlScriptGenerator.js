@@ -3,7 +3,12 @@ import ReactDOM from "react-dom";
 import Axios from "axios";
 import App from "./components/App.jsx";
 
-const componentUrls = [process.env.KEN_URL, process.env.DAVID_URL];
+const componentUrls = [
+  process.env.KEN_URL,
+  process.env.DAVID_URL,
+  process.env.MATT_URL,
+  process.env.LOUIS_URL
+];
 
 const componentUrlPromises = componentUrls.map(url => {
   return Axios.get(url);
@@ -16,7 +21,7 @@ Promise.all(componentUrlPromises)
     });
   })
   .then(() => {
-    ReactDOM.render(<App />, document.getElementById("app"));
+    // ReactDOM.render(<App />, document.getElementById("app"));
   });
 
 // ReactDOM.render(<App />, document.getElementById("app"));

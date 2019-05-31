@@ -42,7 +42,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div id="navbar">Navbar Loading...</div>
+        <Navbar />
         <input type="text" onChange={this.onTextChange} />
         <button onClick={this.onClick}>FIND NEW SHOE</button>
         <div className="container-fluid" id="override-container">
@@ -59,11 +59,10 @@ class App extends React.Component {
               />
               <CartFavoriteButtons sku={this.state.sku} />
               <Description sku={this.state.sku} />
-              <div id="customer-reviews">Customer Reviews Loading...</div>
+              <CustomerReviews />
             </div>
           </div>
         </div>
-        {/* <Carousel /> */}
         <div className="row" />
       </div>
     );
