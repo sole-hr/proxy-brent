@@ -19,3 +19,12 @@
     background-color: red;
   }
 } */
+
+
+#carousel > div > div:nth-child(2) > div > button.slick-arrow.slick-next {
+  display: none;
+}
+
+#eapps-instagram-feed-1 > a {
+  display: none;
+}
