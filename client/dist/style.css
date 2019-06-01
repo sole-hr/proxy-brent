@@ -1,5 +1,5 @@
 #main-container {
-  padding: 2% 12%;
+  padding: 2% 10%;
 }
 
 .accordion {
@@ -11,3 +11,11 @@
   position: sticky;
   z-index: 100;
 }
+
+
+/* Small Devices, Tablets */
+/* @media only screen and (min-width : 768px) {
+  body {
+    background-color: red;
+  }
+} */

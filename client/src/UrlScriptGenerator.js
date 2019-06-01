@@ -4,7 +4,7 @@ const componentUrls = [
   process.env.KEN_URL,
   process.env.DAVID_URL,
   process.env.MATT_URL,
-  process.env.LOUIS_URL
+  process.env.LOUIS_URL,
 ];
 
 const componentUrlPromises = componentUrls.map(url => {
