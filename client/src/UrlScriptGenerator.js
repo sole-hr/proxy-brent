@@ -1,7 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import Axios from "axios";
-import App from "./components/App.jsx";
 
 const componentUrls = [
   process.env.KEN_URL,

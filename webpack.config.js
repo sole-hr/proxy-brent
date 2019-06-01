@@ -5,7 +5,6 @@ const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: {
-    app: `${SRC_DIR}/components/App.jsx`,
     urlScriptGenerator: `${SRC_DIR}/UrlScriptGenerator.js`
   },
   output: {
